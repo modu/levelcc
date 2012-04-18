@@ -1,0 +1,65 @@
+<h1>Level#new</h1>
+
+<%= form_for(@lc) do |f| %>
+  <div class="field">
+    <%= f.label :creator_name %><br />
+    <%= f.text_field :level_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :level_name %><br />
+    <%= f.text_field :level_name%>
+  </div>
+  <div class="field">
+    <%= f.label :start_point %><br />
+    <%= f.text_field :start_point %>
+  </div>
+	<br/>
+  <div class="field">
+    <%= f.label :time_limit %><br />
+    <%= f.text_field :time_limit %>
+  </div>
+  	<br/>
+  <div class="field">
+    <%= f.label :instruction %><br />
+    <%= f.text_field :instruction %>
+  </div>
+  	<br/>
+  <div class="field">
+    <%= f.label :instruction_sequence %><br />
+    <%= f.text_field :instruction_sequence %>
+  </div>
+  	<br/>
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  	<br/>
+  <div class="field">
+    <%= f.label :number_of_trial %><br />
+    <%= f.text_field :number_of_trial %>
+  </div>
+
+  <div class="dropdown">
+	 <%= f.collection_select :type, Level::TYPE, :to_s, :to_s,:include_blank => true
+	  %>
+<!-- :method :collection :value_method :text_method, option = {}, htmlOptions = {} -->  
+</div><br />
+
+  <div class="dropdown">
+	 <%= f.collection_select :mode, Level::MODE, :to_s, :to_s, :include_blank => true
+	  %>
+  </div><br />
+
+  <div class="dropdown">
+	 <%= f.collection_select :instruction_sequence, Level::INSTRUCTIONAL_SEQUENCE, :to_s, :to_s, :include_blank => true
+	  %>
+  </div><br /><br />
+
+  <div class="actions">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>
+
+<p>Find me in app/views/level/new.html.erb</p>
+

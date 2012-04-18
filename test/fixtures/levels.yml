@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  levelname: MyString
+  levelcreator: MyString
+  xml: 
+
+two:
+  levelname: MyString
+  levelcreator: MyString
+  xml: 

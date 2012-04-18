@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Levelcc</title>
+	<a href="#" class="show_hide">Show/hide </a>
+	<div class="slidingDiv">
+	Fill this space with really interesting content. 
+	<a href="#" class="show_hide">hide</a></div>
+<!--	
+<script src="/javascripts/jquery.js" type="text/javascript"></script>
+	<script src="/javascripts/jquery-ui.js" type="text/javascript"></script>
+	<script src="/javascripts/jrails.js" type="text/javascript"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js" type="text/javascript"></script>
+	
+-->
+
+
+<!--
+  <script src="/javascripts/prototype.js?1326235221" type="text/javascript"></script>
+<script src="/javascripts/effects.js?1326235221" type="text/javascript"></script>
+<script src="/javascripts/dragdrop.js?1326235221" type="text/javascript"></script>
+<script src="/javascripts/controls.js?1326235221" type="text/javascript"></script>
+<script src="/javascripts/rails.js?1326235221" type="text/javascript"></script>
+<script src="/javascripts/application.js?1326235221" type="text/javascript"></script> 
+-->
+
+  <meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="rqZpb7+iHvw91Ic9&#47;10bNdlRrUaLCZjdX8Y2uU&#47;UtfE="/>
+</head>
+<body>
+
+<h1>Level#new</h1>
+<%= stylesheet_link_tag 'custom', :media => 'screen' %>
+
+<form accept-charset="UTF-8" action="/levels" class="new_level" id="new_level" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="rqZpb7+iHvw91Ic9/10bNdlRrUaLCZjdX8Y2uU/UtfE=" /></div>
+  <div class="field">
+    <label for="level_creator_name">Creator Name</label>
+    <input id="level_level_name" name="creatorname" size="30" type="text" />
+  </div>
+</br>
+  <div class="field">
+    <label for="level_level_name">Level name</label>
+    <input id="level_level_name" name="levelname" size="30" type="text" />
+  </div>
+  <div class="field">
+    <label for="level_start_point">Start point</label>
+    <input id="level_start_point" name="startPoint" size="30" type="text"  />
+  </div>
+	<br/>
+  <div class="field">
+    <label for="level_time_limit">Time limit</label>
+    <input id="level_time_limit" name="timeLimit" size="30" type="text"  />
+  </div>
+  	<br/>
+  <div class="field">
+    <label for="level_title">Title</label>
+    <input id="level_title" name="title" size="30" type="text"  />
+  </div>
+  	<br/>
+  <div class="field">
+    <label for="level_number_of_trial">Number of trial</label>
+    <input id="level_number_of_trial" name="number_of_trial" size="30" type="text"  />
+  </div>
+
+  <div class="dropdown">
+	<p> LEVEL-TYPE</p>
+	 <select id="level_type" name="type"><option value=""></option>
+<option value="At_Midpoint">At_Midpoint</option>
+<option value="at 0">at 0</option>
+<option value="at 1/4s">at 1/4s</option>
+<option value="at 10s">at 10s</option>
+<option value="At Whole Number">At Whole Number</option></select>
+<!-- :method :collection :value_method :text_method, option = {}, htmlOptions = {}  
+ -->
+ </div>
+  <div class="dropdown">
+	<p>MODE </p>
+	 <select id="level_mode" name="mode"><option value=""></option>
+<option value="Click">Click</option>
+<option value="Type">Type</option>
+<option value="Mix!">Mix!</option>
+<option value="Random">Random</option></select>
+  </div><br />
+  <div class="dropdown">
+	<p>instruction </p>
+	 <select id="level_instruction_sequence" name="instruction_sequence"><option value=""></option>
+<option value="As in instruction Set">As in instruction Set</option>
+<option value="Randomize once">Randomize once</option>
+<option value="Randomize every trial">Randomize every trial</option>
+<option value="ITS">ITS</option></select>
+  </div><br />
+
+  <div class="actions">
+    <input id="level_submit" name="commit" type="submit" value="Sign up" />
+  </div>
+</form>
+<p>Find me in app/views/level/new.html.erb</p>
+
+
+<%= debug(params) if Rails.env.development? %>
+
+</body>
+</html>
+
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+        $(".slidingDiv").hide();
+        $(".show_hide").show();
+
+	$('.show_hide').click(function(){
+	$(".slidingDiv").slideToggle();
+	});
+
+});
+
+</script>
+
+
+
+

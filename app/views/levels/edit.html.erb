@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Levelcc</title>
+</head>
+<body>
+
+<h1>Level#new</h1>
+
+<form accept-charset="UTF-8" action="/levels" class="new_level" id="new_level" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="rqZpb7+iHvw91Ic9/10bNdlRrUaLCZjdX8Y2uU/UtfE=" /></div>
+  <div class="field">
+    <label for="level_creator_name">Creator Name</label>
+    <input id="level_level_name" name="creatorname" size="30" type="text" value= <%=@creatorname%> >
+  </div>
+  <div class="field">
+    <label for="level_level_name">Level name</label>
+    <input id="level_level_name" name="levelname" size="30" type="text" value= <%=@levelname%> >
+  </div>
+  <div class="field">
+    <label for="level_start_point">Start point</label>
+    <input id="level_start_point" name="startPoint" size="30" type="text" value= <%=@startpoint%> >
+  </div><!--  add endPoint div also-->
+	<br/>
+  <div class="field">
+    <label for="level_time_limit">Time limit</label>
+    <input id="level_time_limit" name="timeLimit" size="30" type="text" value= <%=@timelimit%> >
+  </div>
+  	<br/>
+  <div class="field">
+    <label for="level_title">Title</label>
+    <input id="level_title" name="title" size="30" type="text" value = <%=@title%> />
+  </div>
+  	<br/>
+  <div class="field">
+    <label for="level_number_of_trial">Number of trial</label>
+    <input id="level_number_of_trial" name="number_of_trial" size="30" type="text" value =  <%@numberoftrial%> >
+  </div>
+
+  <div class="dropdown">
+	 LEVEL-TYPE
+	 <select id="level_type" name="type"><option value= <%@type%>></option>
+			<option value="At_Midpoint">At_Midpoint</option>
+			<option value="at 0">at 0</option>
+			<option value="at 1/4s">at 1/4s</option>
+			<option value="at 10s">at 10s</option>
+			<option value="At Whole Number">At Whole Number</option></select>
+<!-- :method :collection :value_method :text_method, option = {}, htmlOptions = {}  -->
+ </div>
+  <div class="dropdown">
+    MODE 
+	 <select id="level_mode" name="mode"><option value=""></option>
+			<option value="Click">Click</option>
+			<option value="Type">Type</option>
+			<option value="Mix!">Mix!</option>
+			<option value="Random">Random</option></select>
+  </div><br />
+  <div class="dropdown">
+	instruction
+	 <select id="level_instruction_sequence" name="instruction_sequence"><option value=""></option>
+			<option value="As in instruction Set">As in instruction Set</option>
+			<option value="Randomize once">Randomize once</option>
+			<option value="Randomize every trial">Randomize every trial</option>
+			<option value="ITS">ITS</option></select>
+  </div><br />
+
+  <div class="actions">
+    <input id="level_submit" name="commit" type="submit" value="Sign up" />
+  </div>
+</form>
+<%= debug(params) if Rails.env.development? %>
+
+</body>
+</html>
+

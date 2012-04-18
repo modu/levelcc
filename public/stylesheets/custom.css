@@ -1,0 +1,22 @@
+.slidingDiv {
+	height:300px;
+	background-color: #99CCFF;
+	padding:20px;
+	margin-top:10px;
+	border-bottom:5px solid #3399FF;
+}
+
+.show_hide {
+	display:none;
+}
+
+#rdmeasurement, #input1 ,#textbinsize1, #hidebs ,#hidekc, #txtbtnkcinput1,#hidebtnm{
+	display:none;
+}
+body {
+	
+	background-color:#F0F8FF;  #lightblue
+	#background-color: #FFFAFA;  #snow1
+	#background-color: #00FF7F;  #white
+}
+
